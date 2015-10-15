@@ -27,7 +27,7 @@ RUN mkdir /opt/spark
 
 
 # Download Everything we need
-ADD http://www.scala-lang.org/files/archive/scala-$SCALA_VERSION.deb / /
+ADD http://www.scala-lang.org/files/archive/scala-$SCALA_VERSION.deb /
 RUN wget https://www.googledrive.com/host/0Bw4Hdv5THI68UzdSX1d4ZVJhTUk -O spark-$SPARK_VERSION_$SCALA_VERSION.tgz /
 
 
