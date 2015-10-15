@@ -28,7 +28,7 @@ RUN mkdir /opt/spark
 
 # Download Everything we need
 ADD http://www.scala-lang.org/files/archive/scala-$SCALA_VERSION.deb /
-RUN wget https://www.googledrive.com/host/0Bw4Hdv5THI68UzdSX1d4ZVJhTUk -O spark-$SPARK_VERSION_$SCALA_VERSION.tgz /
+RUN wget https://www.googledrive.com/host/0Bw4Hdv5THI68UzdSX1d4ZVJhTUk -O spark-$SPARK_VERSION_$SCALA_VERSION.tgz
 
 
 # Install Scala
@@ -39,7 +39,7 @@ RUN tar -xzf spark-$SPARK_VERSION_$SCALA_VERSION.tgz -C /opt/spark --strip-compo
 ADD conf/spark-defaults.conf /opt/spark/conf/
 
 # Remove the downloads
-RUN rm scala-2.11.7.deb spark-1.5.1_2.11.tgz
+RUN rm scala-$SCALA_VERSION.deb spark-$SPARK_VERSION_$SCALA_VERSION.tgz
 
 EXPOSE 4040 18080 7001 7002 7003 7004 7005 7006 8080 8081 7077 7088
 
