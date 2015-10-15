@@ -1,0 +1,5 @@
+# Can override properties here, do not check-in changes to GIT
+PORTS = -P
+
+VOLUMES = -v /var/log/:/var/log
+ENV =
